@@ -28,7 +28,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "node --test \"test/*.test.mjs\"",
+    "test": "node --test",
     "sync-skill": "node tools/sync-skill.mjs"
   },
   "dsh": {
