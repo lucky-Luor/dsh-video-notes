@@ -1,0 +1,55 @@
+{
+  "name": "dsh-video-notes",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: turn Bilibili / Douyin / YouTube / Xiaohongshu videos into Markdown class notes.",
+  "license": "MIT",
+  "author": "lucky-Luor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucky-Luor/dsh-video-notes.git"
+  },
+  "homepage": "https://github.com/lucky-Luor/dsh-video-notes#readme",
+  "bugs": "https://github.com/lucky-Luor/dsh-video-notes/issues",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "skill/",
+    "skill.lock.json",
+    "README.md",
+    "README_EN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "sync-skill": "node tools/sync-skill.mjs"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh-skill",
+    "bilibili",
+    "douyin",
+    "youtube",
+    "xiaohongshu",
+    "video-notes",
+    "asr",
+    "whisper"
+  ]
+}

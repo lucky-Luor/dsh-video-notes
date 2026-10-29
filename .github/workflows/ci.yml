@@ -1,0 +1,25 @@
+# CI：每次推送与 PR 运行插件测试，并检查发布清单不含凭据
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # 覆盖 package.json 声明的最低版本与当前 LTS
+        node: [20, 22]
+    steps:
+      # 拉取代码
+      - uses: actions/checkout@v4
+      # 安装指定版本的 Node.js
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      # 运行全部测试（含 skill 副本与锁文件一致性校验）
+      - run: npm test
+      # 发布清单里出现凭据或 GPL 第三方代码即失败
+      - run: |
+          npm pack --dry-run --json > pack.json
+          if grep -E '"path": "([^"]*/)?(config\.json|[^"/]*\.env|\.env[^"/]*|abogus\.py)"' pack.json; then echo "发布清单含禁止文件"; exit 1; fi

@@ -1,0 +1,6 @@
+# DeepSeek Harness 组合包配置层：把本插件插入当前 profile（插件按包名引用）
+- insert:
+    # 行 id：用户可在自己的 profile patch 里按此 id 覆盖或禁用本插件
+    - id: dsh-video-notes
+      # 插件模块：解析为本包的 main（index.js）
+      name: dsh-video-notes

@@ -1,0 +1,13 @@
+# 依赖与打包产物
+node_modules/
+*.tgz
+# 同步脚本的暂存目录（失败时可能残留）
+skill/.staging/
+# skill 运行时写入的本地凭据与第三方下载文件，任何情况下都不入库
+skill/*/config.json
+skill/*/scripts/abogus.py
+*.env
+.env*
+# Python 运行缓存
+__pycache__/
+*.pyc

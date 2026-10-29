@@ -1,0 +1,19 @@
+# bilibili-douyin-notes 运行时依赖
+# 按需安装（脚本均为惰性 import，不用的组件不装也不影响其他流程）：
+#   B站笔记流程（第1~3步）: faster-whisper ctranslate2 av numpy pillow
+#     （ctranslate2 为 faster-whisper 的推理后端，随其依赖树实际安装，此处显式声明）
+#   抖音流程（第1步）:      gmssl
+#   YouTube流程（第1步）:   yt-dlp youtube-transcript-api（另建议安装 deno 供 yt-dlp 解 JS 挑战）
+#   小红书流程（第1步）:    无额外依赖（纯标准库）
+#   B站扫码登录:            qrcode pillow（生成二维码 PNG 图片；ASCII 仅为兜底）
+#   截图画质初筛:           numpy pillow
+# 开发/测试依赖见 requirements-dev.txt
+faster-whisper
+ctranslate2
+av
+numpy
+gmssl
+pillow
+qrcode
+yt-dlp>=2026.8.19
+youtube-transcript-api>=1.2.0

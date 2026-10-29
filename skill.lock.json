@@ -1,0 +1,29 @@
+{
+  "source": "https://github.com/lucky-Luor/bilibili-douyin-notes.git",
+  "ref": "main",
+  "commit": "a9b9cae97d5c5e80aaba14d4cd6a9e0aabea749d",
+  "syncedAt": "2026-10-29T02:11:47.968Z",
+  "skill": "bilibili-douyin-notes",
+  "files": [
+    "LICENSE",
+    "SKILL.md",
+    "config.example.json",
+    "references/anchors.json",
+    "references/asr-glossary.json",
+    "references/glossary-user.example.json",
+    "references/note-template.md",
+    "requirements.txt",
+    "scripts/apply_glossary.py",
+    "scripts/bili_fetch.py",
+    "scripts/bili_screenshot.py",
+    "scripts/bili_transcribe.py",
+    "scripts/clean_media.py",
+    "scripts/douyin_fetch.py",
+    "scripts/ensure_abogus.py",
+    "scripts/note_nav.py",
+    "scripts/transcript_chunk.py",
+    "scripts/validate_note.py",
+    "scripts/xhs_fetch.py",
+    "scripts/yt_fetch.py"
+  ]
+}
